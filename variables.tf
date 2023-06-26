@@ -185,6 +185,13 @@ variable "arn_custom_backups_kms_key" {
   default     = null
 }
 
+# ===========================[ RDS Snapshot management ]========================
+variable "snapshot_identifier" {
+  description = "Snapshot id to create the db from"
+  type        = string
+  default     = null
+}
+
 # ===========================[ RDS Secret settings]========================
 
 variable "rds_secret_recovery_window_in_days" {

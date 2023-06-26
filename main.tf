@@ -118,6 +118,9 @@ resource "aws_db_instance" "this" {
   performance_insights_enabled = var.performance_insights_enabled
   deletion_protection          = var.deletion_protection
 
+  ## SNAPSHOT
+  snapshot_identifier = var.snapshot_identifier
+
   lifecycle {
     create_before_destroy = true
   }
