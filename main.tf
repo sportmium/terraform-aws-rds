@@ -79,7 +79,7 @@ resource "aws_kms_key" "this" {
 
 resource "aws_db_instance" "this" {
 
-  identifier = var.identifier
+  identifier = "${var.identifier}${var.identifier_suffix}"
 
   ## STORAGE
   storage_type          = var.storage_type

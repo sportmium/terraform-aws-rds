@@ -14,6 +14,12 @@ variable "identifier" {
   type        = string
 }
 
+variable "identifier_suffix" {
+  description = "A suffix for the RDS instance, just for its identifier. Useful for replacement from snapshot, to let the candidate be ready before making the switch"
+  type        = string
+  default     = ""
+}
+
 variable "instance_class" {
   description = "Instance class for your RDS instance"
   type        = string
